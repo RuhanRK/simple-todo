@@ -49,10 +49,10 @@ class App extends Component {
                 <Jumbotron>
                     <Container>
                         <Row>
-                            <Col>
+                            <Col md={5}>
                                 <FormComponent setTodo={this.setTodo} />
                             </Col>
-                            <Col>
+                            <Col md={7} style={{ marginTop: "20px" }}>
                                 <ListGroup variant="flush">
                                     {this.state.todos.map(todo => (
                                         <ListGroup.Item key={todo.id}>
