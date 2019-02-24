@@ -17,6 +17,7 @@ class App extends Component {
             { id: 1, title: "This is second todo" }
         ]
     };
+    // set todo
     setTodo = todo => {
         // create id for todo
         let id, todoLength;
@@ -33,6 +34,13 @@ class App extends Component {
 
         // set new todo to todos
         this.setState({ todos: [...this.state.todos, newTodo] });
+    };
+
+    // remove todo
+    removeTodo = id => {
+        let todos = [...this.state.todos];
+        todos = todos.filter(todo => todo.id !== id);
+        this.setState({ todos });
     };
     render() {
         return (
@@ -51,7 +59,14 @@ class App extends Component {
                                             <Row>
                                                 <Col>{todo.title}</Col>
                                                 <Col>
-                                                    <Button variant="outline-danger">
+                                                    <Button
+                                                        onClick={() =>
+                                                            this.removeTodo(
+                                                                todo.id
+                                                            )
+                                                        }
+                                                        variant="outline-danger"
+                                                    >
                                                         Remove
                                                     </Button>
                                                 </Col>
