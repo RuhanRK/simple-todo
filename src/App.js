@@ -42,6 +42,7 @@ class App extends Component {
         todos = todos.filter(todo => todo.id !== id);
         this.setState({ todos });
     };
+    
     render() {
         return (
             <React.Fragment>
