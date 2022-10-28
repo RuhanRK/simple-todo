@@ -4,9 +4,8 @@
 
 ### For Serve this project you have to Download this project and run below command
 
-`npm install` or `yarn install`
-and
-`npm start` or `yarn start`
+1. `npm install` or `yarn install`
+2. `npm start` or `yarn start`
 
 ---
 
