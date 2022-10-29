@@ -23,7 +23,7 @@ export class FormComponent extends Component {
                 <Form.Group controlId="add-todo">
                     <Form.Label>Add Todo</Form.Label>
                     <Form.Control
-                        placeholder="Add Your todo"
+                        placeholder="Add Your todo..."
                         value={this.state.todo}
                         onChange={this.handleChange}
                     />
